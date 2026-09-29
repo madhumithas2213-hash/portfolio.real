@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhumitha S. | Full Stack Developer &amp; CSE Undergrad</title>
+  <meta name="description" content="Portfolio of Madhumitha S. - 3rd-year B.E. Computer Science and Engineering student at K.S.R. College of Engineering (CGPA: 8.023). Aspiring Full Stack Engineer.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+
+  <!-- Ambient Cosmic Scene & Interactive Particle Canvas -->
+  <div class="ambient-scene" aria-hidden="true">
+    <canvas id="particleCanvas"></canvas>
+    <div class="aurora-orb aurora-1"></div>
+    <div class="aurora-orb aurora-2"></div>
+    <div class="aurora-orb aurora-3"></div>
+    <div class="tech-grid-overlay"></div>
+  </div>
+
+  <!-- =========================================================================
+       Site Header / Navigation
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-flex">
+      <a href="#home" class="brand-logo" aria-label="Madhumitha S. Home">
+        <span class="brand-monogram-crest">MS</span>
+        <span>Madhumitha S.</span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-pill-list" id="navMenu">
+          <li><a href="#home" class="nav-pill-link active">Home</a></li>
+          <li><a href="#about" class="nav-pill-link">About</a></li>
+          <li><a href="#skills" class="nav-pill-link">Skills</a></li>
+          <li><a href="#projects" class="nav-pill-link">Projects</a></li>
+          <li><a href="#education" class="nav-pill-link">Education</a></li>
+          <li><a href="#resume" class="nav-pill-link">Resume</a></li>
+          <li><a href="#contact" class="nav-pill-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-ctrl-group">
+        <button id="themeToggleBtn" class="theme-switch-btn" aria-label="Toggle dark and light theme" title="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+
+        <button id="mobileMenuBtn" class="hamburger-btn" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         1. Hero Section (Split Screen with Interactive Terminal)
+         ========================================================================= -->
+    <section class="hero-sec" id="home">
+      <div class="container hero-grid">
+        <!-- Left: Introduction -->
+        <div class="hero-left-box">
+          <div class="beacon-pill">
+            <span class="beacon-dot"></span>
+            <span>Open for Summer &amp; Placement Internships 2026</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <br><span class="gradient-text">Madhumitha S.</span>
+          </h1>
+
+          <div class="hero-role-line">
+            <span>&gt;&nbsp;</span>
+            <span id="typewriterText">Full Stack Engineer</span>
+            <span class="cursor-line"></span>
+          </div>
+
+          <p class="hero-desc">
+            3rd-Year Computer Science &amp; Engineering student at K.S.R. College of Engineering (8.023 CGPA) passionate about Full Stack Web Development, modern UI/UX design, and clean backend architectures.
+          </p>
+
+          <div class="btn-group">
+            <a href="#projects" class="btn-action btn-action-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              Explore Projects
+            </a>
+            <a href="assets/resume-placeholder.pdf" download="Madhumitha_S_Resume.pdf" class="btn-action btn-action-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+            <a href="#contact" class="btn-action btn-action-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div>
+              <div class="stat-val">8.023</div>
+              <div class="stat-label">Current CGPA (CSE)</div>
+            </div>
+            <div>
+              <div class="stat-val">84.00%</div>
+              <div class="stat-label">12th HSC (Science)</div>
+            </div>
+            <div>
+              <div class="stat-val">3rd Year</div>
+              <div class="stat-label">Graduating in 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Professional Profile Portrait Showcase -->
+        <div class="hero-right-box">
+          <div class="hero-profile-container">
+            <div class="hero-profile-ambient" aria-hidden="true"></div>
+
+            <div class="hero-profile-frame spotlight-box">
+              <!-- Floating Top Badge -->
+              <div class="hero-badge-chip badge-chip-top">
+                <span class="chip-icon-wrap">⚡</span>
+                <span class="chip-text-primary">Full Stack Developer</span>
+                <span class="chip-tag-pill">React &bull; Python</span>
+              </div>
+
+              <!-- Main Profile Portrait Image -->
+              <div class="hero-profile-img-wrap">
+                <img
+                  src="assets/madhumitha.jpg"
+                  alt="Madhumitha S. - Computer Science Engineer &amp; Full Stack Developer"
+                  class="hero-profile-img"
+                  loading="eager"
+                >
+                <div class="hero-profile-inner-overlay"></div>
+              </div>
+
+              <!-- Floating Bottom Badge -->
+              <div class="hero-badge-chip badge-chip-bottom">
+                <span class="chip-icon-wrap">🎓</span>
+                <span class="chip-text-primary">B.E. CSE &bull; KSRCE</span>
+                <span class="chip-tag-pill">8.023 CGPA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         2. About Me (Bento Grid)
+         ========================================================================= -->
+    <section class="content-sec" id="about">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">Engineering Mindset</span>
+          <h2 class="sec-title">About Me</h2>
+          <p class="sec-subtitle">A balanced combination of foundational computer science, modern development practices, and relentless curiosity.</p>
+        </div>
+
+        <div class="about-bento">
+          <div class="bento-card-story spotlight-box">
+            <div class="story-body">
+              <p>
+                I am a 3rd-year <strong>Computer Science &amp; Engineering</strong> student at <strong>K.S.R. College of Engineering, Tiruchengode</strong>, hailing from <strong>Tiruppur, Tamil Nadu</strong>. I enjoy turning complex programming requirements into robust, high-performing web applications.
+              </p>
+              <p>
+                My academic training is grounded in core engineering pillars: <strong>Data Structures, Algorithms, Relational Database Management, and Object-Oriented Software Design</strong>. On top of that, I actively build full-stack interfaces using modern JavaScript, React, and Python backend services.
+              </p>
+              <p>
+                As an aspiring software developer, I value <strong>code readability, rapid learning, and collaborative feedback</strong>. I dissect technical challenges methodically and build applications with clean UI/UX and stable architectures.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-cyan);">Career Objective:</span>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Software Developer / Full Stack Engineer (Internships &amp; Placements)</span>
+            </div>
+          </div>
+
+          <div class="bento-tiles-col">
+            <div class="bento-tile spotlight-box">
+              <span class="tile-tag">Academic Standing</span>
+              <span class="tile-main">8.023 CGPA</span>
+              <span class="tile-detail">Consistent Top Performer</span>
+            </div>
+            <div class="bento-tile spotlight-box">
+              <span class="tile-tag">College</span>
+              <span class="tile-main">KSRCE</span>
+              <span class="tile-detail">Tiruchengode, TN</span>
+            </div>
+            <div class="bento-tile spotlight-box">
+              <span class="tile-tag">Schooling (12th)</span>
+              <span class="tile-main">84.00%</span>
+              <span class="tile-detail">GHSS Saravanapuram</span>
+            </div>
+            <div class="bento-tile spotlight-box">
+              <span class="tile-tag">Hometown</span>
+              <span class="tile-main">Tiruppur</span>
+              <span class="tile-detail">Tamil Nadu, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Recruiter Telemetry Terminal -->
+        <div class="terminal-card spotlight-box" style="margin-top: 2rem;">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="term-dot dot-red"></span>
+              <span class="term-dot dot-yellow"></span>
+              <span class="term-dot dot-green"></span>
+            </div>
+            <div class="terminal-tabs">
+              <button class="term-tab-btn active" data-tab="profile">candidate.json</button>
+              <button class="term-tab-btn" data-tab="stack">skills-matrix.ts</button>
+              <button class="term-tab-btn" data-tab="pitch">why_hire_me.sh</button>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-emerald);"></span>
+              live-session
+            </span>
+          </div>
+          <pre class="terminal-body"><code id="codeRender"></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. Skills Section (Interactive Filter Matrix)
+         ========================================================================= -->
+    <section class="content-sec" id="skills">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">Tech Stack &amp; Tools</span>
+          <h2 class="sec-title">Skills &amp; Capabilities</h2>
+          <p class="sec-subtitle">Transparent, honest breakdown of technologies I have worked with across engineering coursework and projects.</p>
+        </div>
+
+        <div class="filter-pills-bar">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Programming &amp; Backend</button>
+          <button class="filter-btn" data-filter="database">Databases &amp; Tools</button>
+          <button class="filter-btn" data-filter="core">Core CS</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Frontend -->
+          <div class="skill-card spotlight-box" data-category="frontend">
+            <div class="skill-top">
+              <span class="skill-name">HTML5</span>
+              <span class="tier-badge tier-proficient">Proficient</span>
+            </div>
+            <p class="skill-detail">Semantic structure, modern Web APIs, accessibility (a11y), and clean DOM layout.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="frontend">
+            <div class="skill-top">
+              <span class="skill-name">CSS3 &amp; Flex/Grid</span>
+              <span class="tier-badge tier-proficient">Proficient</span>
+            </div>
+            <p class="skill-detail">Fluid layouts, CSS custom properties, glassmorphism, animations, and mobile-first responsive design.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="frontend">
+            <div class="skill-top">
+              <span class="skill-name">JavaScript (ES6+)</span>
+              <span class="tier-badge tier-working">Working Knowledge</span>
+            </div>
+            <p class="skill-detail">Asynchronous programming, promises, DOM manipulation, fetch requests, and event delegation.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="frontend">
+            <div class="skill-top">
+              <span class="skill-name">React</span>
+              <span class="tier-badge tier-learning">Fundamentals</span>
+            </div>
+            <p class="skill-detail">Component-driven architecture, JSX syntax, props, state management hooks (useState, useEffect).</p>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-card spotlight-box" data-category="backend">
+            <div class="skill-top">
+              <span class="skill-name">Python</span>
+              <span class="tier-badge tier-working">Working Knowledge</span>
+            </div>
+            <p class="skill-detail">Algorithm implementation, data structure manipulation, scripting, and backend logic fundamentals.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="backend">
+            <div class="skill-top">
+              <span class="skill-name">C Programming</span>
+              <span class="tier-badge tier-working">Academic</span>
+            </div>
+            <p class="skill-detail">Procedural logic, pointers, memory allocation, and core algorithm design in engineering coursework.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="backend">
+            <div class="skill-top">
+              <span class="skill-name">Java Basics</span>
+              <span class="tier-badge tier-learning">Academic</span>
+            </div>
+            <p class="skill-detail">Class inheritance, interfaces, polymorphism, and OOP concepts practiced in university labs.</p>
+          </div>
+
+          <!-- Databases & Tools -->
+          <div class="skill-card spotlight-box" data-category="database">
+            <div class="skill-top">
+              <span class="skill-name">SQL (MySQL)</span>
+              <span class="tier-badge tier-working">Working Knowledge</span>
+            </div>
+            <p class="skill-detail">Relational schema design, normalization (1NF to BCNF), multi-table joins, subqueries, and indexing.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="database">
+            <div class="skill-top">
+              <span class="skill-name">Git &amp; GitHub</span>
+              <span class="tier-badge tier-working">Version Control</span>
+            </div>
+            <p class="skill-detail">Branching workflows, commits, remote repository management, pull requests, and collaboration.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="database">
+            <div class="skill-top">
+              <span class="skill-name">VS Code</span>
+              <span class="tier-badge tier-proficient">Primary IDE</span>
+            </div>
+            <p class="skill-detail">Extensions, integrated terminal, source control, debugging, and productivity shortcuts.</p>
+          </div>
+
+          <!-- Core CS -->
+          <div class="skill-card spotlight-box" data-category="core">
+            <div class="skill-top">
+              <span class="skill-name">Data Structures</span>
+              <span class="tier-badge tier-working">Coursework</span>
+            </div>
+            <p class="skill-detail">Linked lists, stacks, queues, trees, searching, sorting, and time/space complexity analysis.</p>
+          </div>
+
+          <div class="skill-card spotlight-box" data-category="core">
+            <div class="skill-top">
+              <span class="skill-name">OOP Principles</span>
+              <span class="tier-badge tier-proficient">Strong Concept</span>
+            </div>
+            <p class="skill-detail">Encapsulation, abstraction, inheritance, and polymorphism applied to maintainable code design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. Projects Section
+         ========================================================================= -->
+    <section class="content-sec" id="projects">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">Production Applications &amp; Research</span>
+          <h2 class="sec-title">Featured Projects</h2>
+          <p class="sec-subtitle">Deployed web applications, sensor-driven geospatial tracking systems, and full-stack engineering tools.</p>
+        </div>
+
+        <!-- Project 1: MoneyMate -->
+        <article class="featured-project-card spotlight-box">
+          <div class="project-header-row">
+            <span class="sec-tag" style="margin-bottom: 0;">Personal Finance &bull; Full Stack Web App</span>
+            <span class="badge-live-pulse">
+              <span class="pulse-emerald-dot"></span>
+              Live Deployed on Vercel
+            </span>
+          </div>
+
+          <h3 class="project-title-h3">MoneyMate &mdash; Smart Expense Tracker &amp; Budget Planner</h3>
+
+          <div class="problem-solution-grid">
+            <div class="ps-box">
+              <div class="ps-label">Problem Statement</div>
+              <p class="ps-text">Individuals struggle with chaotic spreadsheets and disjointed notes to monitor daily expenditures, leading to frequent budget overruns and a lack of category-level financial visibility.</p>
+            </div>
+            <div class="ps-box">
+              <div class="ps-label">Implemented Solution</div>
+              <p class="ps-text">A responsive React &amp; Vite web application featuring instant transaction logging, dynamic budget progress thresholds, visual category breakdowns, and seamless dark/light modes.</p>
+            </div>
+          </div>
+
+          <ul class="project-highlights-list">
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>Real-Time Financial Logic:</strong> Instant automatic balance recalculations across credits, debits, and categories.</span>
+            </li>
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>Interactive Visual Analytics:</strong> Visual category progress meters highlighting budget thresholds.</span>
+            </li>
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>Persistent Storage:</strong> Browser-based persistent caching preserving transaction logs across reloads.</span>
+            </li>
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>Modern UI/UX:</strong> Mobile-first clean interface with responsive Dark &amp; Light theme toggles.</span>
+            </li>
+          </ul>
+
+          <div class="tag-cloud">
+            <span class="tag-pill">React</span>
+            <span class="tag-pill">Vite</span>
+            <span class="tag-pill">JavaScript (ES6+)</span>
+            <span class="tag-pill">Tailwind &amp; CSS3</span>
+            <span class="tag-pill">Personal Finance API</span>
+            <span class="tag-pill">Vercel Cloud</span>
+          </div>
+
+          <div class="project-actions-footer">
+            <span style="font-size: 0.875rem; color: var(--text-secondary);">
+              <strong>Role:</strong> Frontend / Full Stack Architecture &amp; State Management
+            </span>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="https://money-mate-xi.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-action btn-live-launch" style="padding: 0.65rem 1.35rem; font-size: 0.875rem;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Launch Live App ↗
+              </a>
+              <button class="btn-action btn-action-outline" data-modal="moneymate" style="padding: 0.65rem 1.25rem; font-size: 0.875rem;">
+                View Architecture
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: AI-IDR (Dead Reckoning) -->
+        <article class="featured-project-card spotlight-box">
+          <div class="project-header-row">
+            <span class="sec-tag" style="margin-bottom: 0;">Geospatial AI &bull; Sensor Telemetry &bull; Leaflet.js</span>
+            <span class="badge-live-pulse">
+              <span class="pulse-emerald-dot"></span>
+              Live Deployed on GitHub Pages
+            </span>
+          </div>
+
+          <h3 class="project-title-h3">AI-IDR &mdash; Intelligent Dead Reckoning Navigation System</h3>
+
+          <div class="problem-solution-grid">
+            <div class="ps-box">
+              <div class="ps-label">Problem Statement</div>
+              <p class="ps-text">Standard satellite GPS fails completely in GPS-denied environments &mdash; such as underground transit tunnels, indoor structures, and dense concrete urban canyons &mdash; where satellite signals cannot penetrate.</p>
+            </div>
+            <div class="ps-box">
+              <div class="ps-label">Implemented Solution</div>
+              <p class="ps-text">An advanced tracking dashboard implementing inertial dead reckoning estimation, step-frequency monitoring, compass heading telemetry, and local offline-first Leaflet geospatial mapping.</p>
+            </div>
+          </div>
+
+          <ul class="project-highlights-list">
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>Interactive Leaflet Mapping:</strong> Local offline-ready map tiles with continuous coordinate projection.</span>
+            </li>
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>5-Metric Telemetry Cockpit:</strong> Real-time monitoring of Speed, Heading, Step Frequency, Drift, &amp; GPS Confidence.</span>
+            </li>
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>Inertial Sensor Algorithms:</strong> Step detection heuristics and cumulative vector displacement tracking.</span>
+            </li>
+            <li class="highlight-item">
+              <span class="highlight-bullet">&#10003;</span>
+              <span><strong>High-Tech Futuristic UI:</strong> Sci-fi cyber telemetry theme with interactive cockpit switches and live logs.</span>
+            </li>
+          </ul>
+
+          <div class="tag-cloud">
+            <span class="tag-pill">JavaScript (ES6+)</span>
+            <span class="tag-pill">Leaflet.js</span>
+            <span class="tag-pill">Dead Reckoning Algorithms</span>
+            <span class="tag-pill">Sensor Telemetry</span>
+            <span class="tag-pill">Geospatial Analytics</span>
+            <span class="tag-pill">GitHub Pages</span>
+          </div>
+
+          <div class="project-actions-footer">
+            <span style="font-size: 0.875rem; color: var(--text-secondary);">
+              <strong>Role:</strong> Lead Developer (Dead Reckoning Algorithms, Geospatial Mapping &amp; Cockpit UI)
+            </span>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="https://madhumithas2213-hash.github.io/AI-Intelligent-Dead-Reckoning/" target="_blank" rel="noopener noreferrer" class="btn-action btn-live-launch" style="padding: 0.65rem 1.35rem; font-size: 0.875rem;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Launch Live App ↗
+              </a>
+              <a href="https://github.com/madhumithas2213-hash/AI-Intelligent-Dead-Reckoning" target="_blank" rel="noopener noreferrer" class="btn-action btn-action-outline" style="padding: 0.65rem 1.25rem; font-size: 0.875rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub Repo ↗
+              </a>
+              <button class="btn-action btn-action-outline" data-modal="idr" style="padding: 0.65rem 1.25rem; font-size: 0.875rem;">
+                View Architecture
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Dynamic Case Study Modal -->
+    <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <button class="modal-close-trigger" id="closeModalBtn" aria-label="Close dialog">&times;</button>
+        <span class="sec-tag" id="modalTag">Deep-Dive Case Study</span>
+        <h3 style="font-size: 1.5rem; font-weight: 900; color: var(--text-primary); margin-top: 0.5rem; margin-bottom: 1.5rem;" id="modalTitle">
+          Case Study Details
+        </h3>
+        <div id="modalDynamicContent" style="display: flex; flex-direction: column; gap: 1.35rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+          <!-- Dynamically populated via script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         5. Education (Timeline)
+         ========================================================================= -->
+    <section class="content-sec" id="education">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">Academic Records</span>
+          <h2 class="sec-title">Education Milestones</h2>
+          <p class="sec-subtitle">Verified academic track record demonstrating discipline and consistent high performance.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- College -->
+          <div class="timeline-item-node">
+            <div class="timeline-beacon-node" aria-hidden="true"></div>
+            <article class="timeline-card-body spotlight-box">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="degree-name">Bachelor of Engineering (B.E.) &ndash; Computer Science &amp; Engineering</h3>
+                  <p class="inst-name">K.S.R. College of Engineering, Tiruchengode</p>
+                </div>
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">2022 &ndash; 2026 (Expected)</span>
+              </div>
+              <span class="cgpa-pill">Current CGPA: 8.023 / 10.0 &bull; 3rd Year (Sem VI)</span>
+              <p style="margin-top: 1.15rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+                Core Engineering Studies: Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, and Web Technologies.
+              </p>
+            </article>
+          </div>
+
+          <!-- School 12th -->
+          <div class="timeline-item-node">
+            <div class="timeline-beacon-node" aria-hidden="true"></div>
+            <article class="timeline-card-body spotlight-box">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="degree-name">Higher Secondary Certificate (HSC &ndash; 12th Standard)</h3>
+                  <p class="inst-name">Government Higher Secondary School, Saravanapuram</p>
+                </div>
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Completed 2022</span>
+              </div>
+              <span class="cgpa-pill">Final Board Score: 84.00% &bull; Science Stream</span>
+              <p style="margin-top: 1.15rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+                Focused studies in Mathematics, Physics, Chemistry, and Computer Science, establishing an analytical foundation.
+              </p>
+            </article>
+          </div>
+
+          <!-- School 10th -->
+          <div class="timeline-item-node">
+            <div class="timeline-beacon-node" aria-hidden="true"></div>
+            <article class="timeline-card-body spotlight-box">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="degree-name">Secondary School Leaving Certificate (SSLC &ndash; 10th Standard)</h3>
+                  <p class="inst-name">Government Higher Secondary School, Saravanapuram</p>
+                </div>
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Completed 2020</span>
+              </div>
+              <span class="cgpa-pill">First Class with Distinction</span>
+              <p style="margin-top: 1.15rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+                Comprehensive secondary schooling with academic distinction in sciences and mathematics.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. Resume Section
+         ========================================================================= -->
+    <section class="content-sec" id="resume">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">Recruiter Resources</span>
+          <h2 class="sec-title">Resume &amp; Credentials</h2>
+          <p class="sec-subtitle">Download an interview-ready summary of academic performance, skills, and project experience.</p>
+        </div>
+
+        <div class="spotlight-box" style="padding: 2.75rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.5rem; align-items: center;">
+          <div>
+            <h3 style="font-size: 1.5rem; font-weight: 900; color: var(--text-primary); margin-bottom: 0.75rem;">Madhumitha S. &mdash; Technical Resume</h3>
+            <p style="font-size: 0.975rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.75rem;">
+              Prepared specifically for campus placement coordinators and technical recruiters. Includes verified academic percentages, key strengths, project milestones, and references.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="assets/resume-placeholder.pdf" download="Madhumitha_S_Resume.pdf" class="btn-action btn-action-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF Resume
+              </a>
+              <a href="assets/resume-placeholder.pdf" target="_blank" rel="noopener noreferrer" class="btn-action btn-action-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Open in New Tab
+              </a>
+            </div>
+          </div>
+
+          <div style="padding: 2rem; background: rgba(255, 255, 255, 0.02); border: 2px dashed var(--border-strong); border-radius: var(--radius-md); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span style="font-family: var(--font-mono); font-size: 0.9rem; font-weight: 700; color: var(--text-primary);">Madhumitha_S_Resume.pdf</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">PDF Document &bull; Verified Format</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. Contact Section
+         ========================================================================= -->
+    <section class="content-sec" id="contact">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-tag">Communication</span>
+          <h2 class="sec-title">Let's Connect</h2>
+          <p class="sec-subtitle">Have an internship opening, campus placement opportunity, or question? Feel free to reach out directly.</p>
+        </div>
+
+        <div class="contact-grid-split">
+          <!-- Left Info Cards -->
+          <div class="contact-info-col">
+            <div class="contact-tile spotlight-box">
+              <div class="contact-tile-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div style="flex-grow: 1;">
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem;">Email Address</div>
+                <a href="mailto:madhumithas2231@gmail.com" style="font-size: 0.975rem; font-weight: 800; color: var(--text-primary); word-break: break-all;" id="emailLink">madhumithas2231@gmail.com</a>
+              </div>
+              <button class="copy-chip-btn" id="copyEmailBtn" data-copy="madhumithas2231@gmail.com">Copy</button>
+            </div>
+
+            <div class="contact-tile spotlight-box">
+              <div class="contact-tile-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem;">Phone Number</div>
+                <a href="tel:+917603852702" style="font-size: 0.975rem; font-weight: 800; color: var(--text-primary);">+91 76038 52702</a>
+              </div>
+            </div>
+
+            <div class="contact-tile spotlight-box">
+              <div class="contact-tile-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem;">Location</div>
+                <span style="font-size: 0.975rem; font-weight: 800; color: var(--text-primary);">Tiruppur, Tamil Nadu, India</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+              <a href="https://linkedin.com/in/madhumitha-s" target="_blank" rel="noopener noreferrer" class="btn-action btn-action-outline" style="flex: 1; padding: 0.65rem 1rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/madhumitha-s" target="_blank" rel="noopener noreferrer" class="btn-action btn-action-outline" style="flex: 1; padding: 0.65rem 1rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Form -->
+          <div class="form-wrapper spotlight-box">
+            <form id="contactForm" novalidate>
+              <div class="form-input-group">
+                <label for="userName" class="form-input-label">Full Name *</label>
+                <input type="text" id="userName" name="name" class="input-box" placeholder="e.g. Priya Sundaram (Recruiter)" required>
+              </div>
+
+              <div class="form-input-group">
+                <label for="userEmail" class="form-input-label">Email Address *</label>
+                <input type="email" id="userEmail" name="email" class="input-box" placeholder="e.g. name@company.com" required>
+              </div>
+
+              <div class="form-input-group">
+                <label for="userMessage" class="form-input-label">Message *</label>
+                <textarea id="userMessage" name="message" class="input-box" placeholder="Discuss an internship, role, or ask a question..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-action btn-action-primary" style="width: 100%; justify-content: center;" id="submitBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </button>
+
+              <div id="formFeedback" class="form-feedback-toast" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-block">
+    <div class="container">
+      <div class="footer-flex-top">
+        <div>
+          <span style="font-weight: 900; font-size: 1.15rem; color: var(--text-primary);">Madhumitha S.</span>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+            3rd Year B.E. Computer Science &amp; Engineering &bull; K.S.R. College of Engineering
+          </p>
+        </div>
+
+        <ul style="display: flex; gap: 1.5rem; list-style: none;">
+          <li><a href="#home" style="color: var(--text-secondary);">Home</a></li>
+          <li><a href="#about" style="color: var(--text-secondary);">About</a></li>
+          <li><a href="#skills" style="color: var(--text-secondary);">Skills</a></li>
+          <li><a href="#projects" style="color: var(--text-secondary);">Projects</a></li>
+          <li><a href="#education" style="color: var(--text-secondary);">Education</a></li>
+          <li><a href="#contact" style="color: var(--text-secondary);">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-flex-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Madhumitha S. Next-Gen Developer Portfolio.</p>
+        <button id="backToTopBtn" style="background: transparent; border: none; color: var(--accent-cyan); font-weight: 700; cursor: pointer;">
+          Back to Top &uarr;
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Pop-up -->
+  <div id="toastNotice" class="toast-pop" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastMsg">Email copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
