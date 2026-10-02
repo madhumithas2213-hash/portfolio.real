@@ -239,7 +239,7 @@
   <span class="code-prop">"hsc_percentage"</span>: <span class="code-str">"84.00%"</span>,
   <span class="code-prop">"graduation_year"</span>: <span class="code-num">2026</span>,
   <span class="code-prop">"hometown"</span>: <span class="code-str">"Tiruppur, Tamil Nadu"</span>,
-  <span class="code-prop">"email"</span>: <span class="code-str">"madhumithas2231@gmail.com"</span>,
+  <span class="code-prop">"email"</span>: <span class="code-str">"madhumithas2213@gmail.com"</span>,
   <span class="code-prop">"phone"</span>: <span class="code-str">"+91 76038 52702"</span>,
   <span class="code-prop">"placement_status"</span>: <span class="code-str">"✨ Ready for Summer / Placement Internships"</span>
 }`,
@@ -431,7 +431,7 @@
 
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', async () => {
-      const email = copyEmailBtn.getAttribute('data-copy') || 'madhumithas2231@gmail.com';
+      const email = copyEmailBtn.getAttribute('data-copy') || 'madhumithas2213@gmail.com';
       try {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(email);
